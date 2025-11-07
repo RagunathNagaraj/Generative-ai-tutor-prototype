@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generative AI Tutor Prototype</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin: 20px; }
+    h2 { color: #222; }
+    textarea { width: 90%; height: 160px; font-family: monospace; }
+    select, button { margin-top: 8px; }
+    pre { background: #fff; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Generative AI Tutor Prototype</h2>
+  <p><i>Developed in 2024 as part of independent research on generative AI for programming education.</i></p>
+
+  <form id="form">
+    <textarea name="code">for i in range(3): print(i)</textarea><br>
+    <label>Mode:
+      <select name="mode">
+        <option value="explain">Explain my code</option>
+        <option value="debug">Debug hint</option>
+      </select>
+    </label>
+    <button type="submit">Generate</button>
+  </form>
+
+  <h3>AI Response</h3>
+  <pre id="result">(response will appear here)</pre>
+
+  <script>
+    document.getElementById('form').onsubmit = async function(e) {
+      e.preventDefault();
+      const fd = new FormData(this);
+      const res = await fetch('/generate', {method:'POST', body:fd});
+      const data = await res.json();
+      document.getElementById('result').textContent = data.result;
+    }
+  </script>
+</body>
+</html>
