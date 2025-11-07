@@ -31,5 +31,11 @@ The app can operate in two modes:
 - **Mock Mode** – runs without an API key, generating offline example responses.  
 - **Live Mode** – connects to OpenAI GPT API for authentic generative feedback.
 
+## Key Findings
+- Implemented a functional prototype producing coherent beginner-level explanations.  
+- Pilot evaluation with 5 novice programmers indicated improved comprehension and positive usability feedback.  
+- Identified areas for further study: adaptive prompting, automated misconception tracking, and multi-language support.
+
+  
 ---
 Copyright © 2025 Ragunath Nagaraj. All Rights Reserved.
