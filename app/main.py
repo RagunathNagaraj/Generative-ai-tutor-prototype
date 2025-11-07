@@ -1,12 +1,3 @@
-"""
-Generative AI Tutor Prototype (Completed – 2024)
-Author: Ragunath Nagaraj
-
-This prototype explores how generative AI can deliver explainable feedback
-to novice Python programmers. Built with Flask, it supports mock mode (offline)
-and live mode (using the OpenAI API).
-"""
-
 from flask import Flask, render_template, request, jsonify
 import os
 
