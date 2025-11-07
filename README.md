@@ -32,3 +32,4 @@ The app can operate in two modes:
 - **Live Mode** – connects to OpenAI GPT API for authentic generative feedback.
 
 ---
+Copyright © 2025 Ragunath Nagaraj. All Rights Reserved.
